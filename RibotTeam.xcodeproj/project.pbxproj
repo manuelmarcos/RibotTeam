@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		314A0283179177BD002C09E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0282179177BD002C09E4 /* UIKit.framework */; };
+		314A0285179177BD002C09E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0284179177BD002C09E4 /* Foundation.framework */; };
+		314A0287179177BD002C09E4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0286179177BD002C09E4 /* CoreGraphics.framework */; };
+		314A0289179177BD002C09E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0288179177BD002C09E4 /* CoreData.framework */; };
+		314A028F179177BD002C09E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 314A028D179177BD002C09E4 /* InfoPlist.strings */; };
+		314A0291179177BD002C09E4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A0290179177BD002C09E4 /* main.m */; };
+		314A0295179177BD002C09E4 /* RBTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A0294179177BD002C09E4 /* RBTAppDelegate.m */; };
+		314A0297179177BD002C09E4 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 314A0296179177BD002C09E4 /* Default.png */; };
+		314A0299179177BD002C09E4 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 314A0298179177BD002C09E4 /* Default@2x.png */; };
+		314A029B179177BD002C09E4 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 314A029A179177BD002C09E4 /* Default-568h@2x.png */; };
+		314A029E179177BD002C09E4 /* RibotTeam.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 314A029C179177BD002C09E4 /* RibotTeam.xcdatamodeld */; };
+		314A02A1179177BD002C09E4 /* RBTMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A02A0179177BD002C09E4 /* RBTMasterViewController.m */; };
+		314A02A4179177BD002C09E4 /* RBTDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A02A3179177BD002C09E4 /* RBTDetailViewController.m */; };
+		314A02A7179177BD002C09E4 /* RBTMasterViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314A02A5179177BD002C09E4 /* RBTMasterViewController_iPhone.xib */; };
+		314A02AA179177BD002C09E4 /* RBTMasterViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314A02A8179177BD002C09E4 /* RBTMasterViewController_iPad.xib */; };
+		314A02AD179177BD002C09E4 /* RBTDetailViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314A02AB179177BD002C09E4 /* RBTDetailViewController_iPhone.xib */; };
+		314A02B0179177BD002C09E4 /* RBTDetailViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 314A02AE179177BD002C09E4 /* RBTDetailViewController_iPad.xib */; };
+		314A02B8179177BD002C09E4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A02B7179177BD002C09E4 /* SenTestingKit.framework */; };
+		314A02B9179177BD002C09E4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0282179177BD002C09E4 /* UIKit.framework */; };
+		314A02BA179177BD002C09E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0284179177BD002C09E4 /* Foundation.framework */; };
+		314A02BB179177BD002C09E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0288179177BD002C09E4 /* CoreData.framework */; };
+		314A02C3179177BD002C09E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 314A02C1179177BD002C09E4 /* InfoPlist.strings */; };
+		314A02C6179177BD002C09E4 /* RibotTeamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A02C5179177BD002C09E4 /* RibotTeamTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		314A02BC179177BD002C09E4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314A0277179177BD002C09E4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 314A027E179177BD002C09E4;
+			remoteInfo = RibotTeam;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		314A027F179177BD002C09E4 /* RibotTeam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RibotTeam.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A0282179177BD002C09E4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		314A0284179177BD002C09E4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		314A0286179177BD002C09E4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		314A0288179177BD002C09E4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		314A028C179177BD002C09E4 /* RibotTeam-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RibotTeam-Info.plist"; sourceTree = "<group>"; };
+		314A028E179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		314A0290179177BD002C09E4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		314A0292179177BD002C09E4 /* RibotTeam-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RibotTeam-Prefix.pch"; sourceTree = "<group>"; };
+		314A0293179177BD002C09E4 /* RBTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBTAppDelegate.h; sourceTree = "<group>"; };
+		314A0294179177BD002C09E4 /* RBTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBTAppDelegate.m; sourceTree = "<group>"; };
+		314A0296179177BD002C09E4 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		314A0298179177BD002C09E4 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		314A029A179177BD002C09E4 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		314A029D179177BD002C09E4 /* RibotTeam.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RibotTeam.xcdatamodel; sourceTree = "<group>"; };
+		314A029F179177BD002C09E4 /* RBTMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBTMasterViewController.h; sourceTree = "<group>"; };
+		314A02A0179177BD002C09E4 /* RBTMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBTMasterViewController.m; sourceTree = "<group>"; };
+		314A02A2179177BD002C09E4 /* RBTDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RBTDetailViewController.h; sourceTree = "<group>"; };
+		314A02A3179177BD002C09E4 /* RBTDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RBTDetailViewController.m; sourceTree = "<group>"; };
+		314A02A6179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RBTMasterViewController_iPhone.xib; sourceTree = "<group>"; };
+		314A02A9179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RBTMasterViewController_iPad.xib; sourceTree = "<group>"; };
+		314A02AC179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RBTDetailViewController_iPhone.xib; sourceTree = "<group>"; };
+		314A02AF179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RBTDetailViewController_iPad.xib; sourceTree = "<group>"; };
+		314A02B6179177BD002C09E4 /* RibotTeamTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RibotTeamTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		314A02B7179177BD002C09E4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		314A02C0179177BD002C09E4 /* RibotTeamTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RibotTeamTests-Info.plist"; sourceTree = "<group>"; };
+		314A02C2179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		314A02C4179177BD002C09E4 /* RibotTeamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RibotTeamTests.h; sourceTree = "<group>"; };
+		314A02C5179177BD002C09E4 /* RibotTeamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RibotTeamTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		314A027C179177BD002C09E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A0283179177BD002C09E4 /* UIKit.framework in Frameworks */,
+				314A0285179177BD002C09E4 /* Foundation.framework in Frameworks */,
+				314A0287179177BD002C09E4 /* CoreGraphics.framework in Frameworks */,
+				314A0289179177BD002C09E4 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		314A02B2179177BD002C09E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A02B8179177BD002C09E4 /* SenTestingKit.framework in Frameworks */,
+				314A02B9179177BD002C09E4 /* UIKit.framework in Frameworks */,
+				314A02BA179177BD002C09E4 /* Foundation.framework in Frameworks */,
+				314A02BB179177BD002C09E4 /* CoreData.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		314A0276179177BD002C09E4 = {
+			isa = PBXGroup;
+			children = (
+				314A028A179177BD002C09E4 /* RibotTeam */,
+				314A02BE179177BD002C09E4 /* RibotTeamTests */,
+				314A0281179177BD002C09E4 /* Frameworks */,
+				314A0280179177BD002C09E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		314A0280179177BD002C09E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				314A027F179177BD002C09E4 /* RibotTeam.app */,
+				314A02B6179177BD002C09E4 /* RibotTeamTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		314A0281179177BD002C09E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				314A0282179177BD002C09E4 /* UIKit.framework */,
+				314A0284179177BD002C09E4 /* Foundation.framework */,
+				314A0286179177BD002C09E4 /* CoreGraphics.framework */,
+				314A0288179177BD002C09E4 /* CoreData.framework */,
+				314A02B7179177BD002C09E4 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		314A028A179177BD002C09E4 /* RibotTeam */ = {
+			isa = PBXGroup;
+			children = (
+				314A0293179177BD002C09E4 /* RBTAppDelegate.h */,
+				314A0294179177BD002C09E4 /* RBTAppDelegate.m */,
+				314A029F179177BD002C09E4 /* RBTMasterViewController.h */,
+				314A02A0179177BD002C09E4 /* RBTMasterViewController.m */,
+				314A02A2179177BD002C09E4 /* RBTDetailViewController.h */,
+				314A02A3179177BD002C09E4 /* RBTDetailViewController.m */,
+				314A02A5179177BD002C09E4 /* RBTMasterViewController_iPhone.xib */,
+				314A02A8179177BD002C09E4 /* RBTMasterViewController_iPad.xib */,
+				314A02AB179177BD002C09E4 /* RBTDetailViewController_iPhone.xib */,
+				314A02AE179177BD002C09E4 /* RBTDetailViewController_iPad.xib */,
+				314A029C179177BD002C09E4 /* RibotTeam.xcdatamodeld */,
+				314A028B179177BD002C09E4 /* Supporting Files */,
+			);
+			path = RibotTeam;
+			sourceTree = "<group>";
+		};
+		314A028B179177BD002C09E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				314A028C179177BD002C09E4 /* RibotTeam-Info.plist */,
+				314A028D179177BD002C09E4 /* InfoPlist.strings */,
+				314A0290179177BD002C09E4 /* main.m */,
+				314A0292179177BD002C09E4 /* RibotTeam-Prefix.pch */,
+				314A0296179177BD002C09E4 /* Default.png */,
+				314A0298179177BD002C09E4 /* Default@2x.png */,
+				314A029A179177BD002C09E4 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		314A02BE179177BD002C09E4 /* RibotTeamTests */ = {
+			isa = PBXGroup;
+			children = (
+				314A02C4179177BD002C09E4 /* RibotTeamTests.h */,
+				314A02C5179177BD002C09E4 /* RibotTeamTests.m */,
+				314A02BF179177BD002C09E4 /* Supporting Files */,
+			);
+			path = RibotTeamTests;
+			sourceTree = "<group>";
+		};
+		314A02BF179177BD002C09E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				314A02C0179177BD002C09E4 /* RibotTeamTests-Info.plist */,
+				314A02C1179177BD002C09E4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		314A027E179177BD002C09E4 /* RibotTeam */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 314A02C9179177BD002C09E4 /* Build configuration list for PBXNativeTarget "RibotTeam" */;
+			buildPhases = (
+				314A027B179177BD002C09E4 /* Sources */,
+				314A027C179177BD002C09E4 /* Frameworks */,
+				314A027D179177BD002C09E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RibotTeam;
+			productName = RibotTeam;
+			productReference = 314A027F179177BD002C09E4 /* RibotTeam.app */;
+			productType = "com.apple.product-type.application";
+		};
+		314A02B5179177BD002C09E4 /* RibotTeamTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 314A02CC179177BD002C09E4 /* Build configuration list for PBXNativeTarget "RibotTeamTests" */;
+			buildPhases = (
+				314A02B1179177BD002C09E4 /* Sources */,
+				314A02B2179177BD002C09E4 /* Frameworks */,
+				314A02B3179177BD002C09E4 /* Resources */,
+				314A02B4179177BD002C09E4 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				314A02BD179177BD002C09E4 /* PBXTargetDependency */,
+			);
+			name = RibotTeamTests;
+			productName = RibotTeamTests;
+			productReference = 314A02B6179177BD002C09E4 /* RibotTeamTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		314A0277179177BD002C09E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = RBT;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Manuel Marcos Regalado";
+			};
+			buildConfigurationList = 314A027A179177BD002C09E4 /* Build configuration list for PBXProject "RibotTeam" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 314A0276179177BD002C09E4;
+			productRefGroup = 314A0280179177BD002C09E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				314A027E179177BD002C09E4 /* RibotTeam */,
+				314A02B5179177BD002C09E4 /* RibotTeamTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		314A027D179177BD002C09E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A028F179177BD002C09E4 /* InfoPlist.strings in Resources */,
+				314A0297179177BD002C09E4 /* Default.png in Resources */,
+				314A0299179177BD002C09E4 /* Default@2x.png in Resources */,
+				314A029B179177BD002C09E4 /* Default-568h@2x.png in Resources */,
+				314A02A7179177BD002C09E4 /* RBTMasterViewController_iPhone.xib in Resources */,
+				314A02AA179177BD002C09E4 /* RBTMasterViewController_iPad.xib in Resources */,
+				314A02AD179177BD002C09E4 /* RBTDetailViewController_iPhone.xib in Resources */,
+				314A02B0179177BD002C09E4 /* RBTDetailViewController_iPad.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		314A02B3179177BD002C09E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A02C3179177BD002C09E4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		314A02B4179177BD002C09E4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		314A027B179177BD002C09E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A0291179177BD002C09E4 /* main.m in Sources */,
+				314A0295179177BD002C09E4 /* RBTAppDelegate.m in Sources */,
+				314A029E179177BD002C09E4 /* RibotTeam.xcdatamodeld in Sources */,
+				314A02A1179177BD002C09E4 /* RBTMasterViewController.m in Sources */,
+				314A02A4179177BD002C09E4 /* RBTDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		314A02B1179177BD002C09E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314A02C6179177BD002C09E4 /* RibotTeamTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		314A02BD179177BD002C09E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 314A027E179177BD002C09E4 /* RibotTeam */;
+			targetProxy = 314A02BC179177BD002C09E4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		314A028D179177BD002C09E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A028E179177BD002C09E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		314A02A5179177BD002C09E4 /* RBTMasterViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A02A6179177BD002C09E4 /* en */,
+			);
+			name = RBTMasterViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		314A02A8179177BD002C09E4 /* RBTMasterViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A02A9179177BD002C09E4 /* en */,
+			);
+			name = RBTMasterViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		314A02AB179177BD002C09E4 /* RBTDetailViewController_iPhone.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A02AC179177BD002C09E4 /* en */,
+			);
+			name = RBTDetailViewController_iPhone.xib;
+			sourceTree = "<group>";
+		};
+		314A02AE179177BD002C09E4 /* RBTDetailViewController_iPad.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A02AF179177BD002C09E4 /* en */,
+			);
+			name = RBTDetailViewController_iPad.xib;
+			sourceTree = "<group>";
+		};
+		314A02C1179177BD002C09E4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				314A02C2179177BD002C09E4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		314A02C7179177BD002C09E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		314A02C8179177BD002C09E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		314A02CA179177BD002C09E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RibotTeam/RibotTeam-Prefix.pch";
+				INFOPLIST_FILE = "RibotTeam/RibotTeam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		314A02CB179177BD002C09E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RibotTeam/RibotTeam-Prefix.pch";
+				INFOPLIST_FILE = "RibotTeam/RibotTeam-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		314A02CD179177BD002C09E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RibotTeam.app/RibotTeam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RibotTeam/RibotTeam-Prefix.pch";
+				INFOPLIST_FILE = "RibotTeamTests/RibotTeamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		314A02CE179177BD002C09E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RibotTeam.app/RibotTeam";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RibotTeam/RibotTeam-Prefix.pch";
+				INFOPLIST_FILE = "RibotTeamTests/RibotTeamTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		314A027A179177BD002C09E4 /* Build configuration list for PBXProject "RibotTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314A02C7179177BD002C09E4 /* Debug */,
+				314A02C8179177BD002C09E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		314A02C9179177BD002C09E4 /* Build configuration list for PBXNativeTarget "RibotTeam" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314A02CA179177BD002C09E4 /* Debug */,
+				314A02CB179177BD002C09E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		314A02CC179177BD002C09E4 /* Build configuration list for PBXNativeTarget "RibotTeamTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314A02CD179177BD002C09E4 /* Debug */,
+				314A02CE179177BD002C09E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		314A029C179177BD002C09E4 /* RibotTeam.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				314A029D179177BD002C09E4 /* RibotTeam.xcdatamodel */,
+			);
+			currentVersion = 314A029D179177BD002C09E4 /* RibotTeam.xcdatamodel */;
+			path = RibotTeam.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 314A0277179177BD002C09E4 /* Project object */;
+}
