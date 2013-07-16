@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model name="Test1.xcdatamodel" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
-    <entity name="Event">
-        <attribute name="timeStamp" optional="YES" attributeType="Date"/>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12E55" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Employee" representedClassName="Employee" syncable="YES">
+        <attribute name="descriptionEmployee" optional="YES" attributeType="String" defaultValueString="No decriptionEmployee" syncable="YES"/>
+        <attribute name="favSeason" optional="YES" attributeType="String" defaultValueString="No favSeason" syncable="YES"/>
+        <attribute name="favSweet" optional="YES" attributeType="String" defaultValueString="No favSweet" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" defaultValueString="No firstName" syncable="YES"/>
+        <attribute name="hexColor" optional="YES" attributeType="String" defaultValueString="No hexColor" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="String" defaultValueString="No id" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" defaultValueString="No lastName" syncable="YES"/>
+        <attribute name="location" optional="YES" attributeType="String" defaultValueString="No location" syncable="YES"/>
+        <attribute name="nickname" optional="YES" attributeType="String" defaultValueString="No nickname" syncable="YES"/>
+        <attribute name="role" optional="YES" attributeType="String" defaultValueString="No role" syncable="YES"/>
+        <attribute name="twitter" optional="YES" attributeType="String" defaultValueString="No twitter" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" defaultValueString="No url" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Event" positionX="261" positionY="189" width="128" height="60"/>
+        <element name="Employee" positionX="160" positionY="192" width="128" height="225"/>
     </elements>
 </model>
