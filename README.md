@@ -163,8 +163,8 @@ Improvements & Evaluation
 
 There are two main things in the design that I would like to improve but I haven´t had time to do.
 
-   * PoppingView is one of them. This view is being added on top of the table view instead of the actual view. We have to change the **RBTMasterViewController_iPhone.xib** in order to do this. It is not a major change but it will affect to the controller **RBTMasterViewController**
-the popping view with the scroll
-uilabel with the scroll it should be different
-better default messages
+   * **PoppingView** is one of them. This view is being added on top of the table view instead of the actual view and that is why it could look broken if you scroll down. We have to change the **RBTMasterViewController_iPhone.xib** in order to do this. It is not a major change but it will affect to the controller **RBTMasterViewController**
+
+   * **RBTDetailViewController_iPhone.xib** I would like to make this view scrollable because at the moment I am resizing the labels in order to fit them into the frame given. Basically, I would like to make dinamic sizes for the label frames. In this case, if we do not have a description, instead of displaying "No description" we will not display it and the view will be resize.  
+
 location string for languajes
