@@ -176,5 +176,5 @@ Lastly, I did a small research at the beginning in order to compare different ap
    * App Icon: It just has a letter and a color. Simple an clear like google App, Vine App, Wikipedia App, tumblr App ... 
    * Launch screen: It is an empty table view. Such as twitter App, notes App or foursquare ...
 
-I am quite happ
+I am quite happy with the result, It is colorful and smooth.
 
