@@ -158,9 +158,12 @@ Frameworks
 
 
 
-Improvements evaluation
-======================
+Improvements & Evaluation
+=========================
 
+There are two main things in the design that I would like to improve but I haven´t had time to do.
+
+   * PoppingView is one of them. This view is being added on top of the table view instead of the actual view. We have to change the **RBTMasterViewController_iPhone.xib** in order to do this. It is not a major change but it will affect to the controller **RBTMasterViewController**
 the popping view with the scroll
 uilabel with the scroll it should be different
 better default messages
