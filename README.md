@@ -163,7 +163,7 @@ Improvements & Evaluation
 
 There are four main things in the design that I would like to improve but I haven´t had time to do.
    
-   * **Instruments** I wanted to use this Xcode tool. It helps you finding memory leaks.
+   * **Instruments** and **RibotTeamTests** I wanted to use these Xcode tools. It helps you finding memory leaks and testing the App.
 
    * **PoppingView** is one of them. This view is being added on top of the table view instead of the actual view and that is why it could look broken if you scroll down. We have to change the **RBTMasterViewController_iPhone.xib** in order to do this. It is not a major change but it will affect to the controller **RBTMasterViewController**
 
