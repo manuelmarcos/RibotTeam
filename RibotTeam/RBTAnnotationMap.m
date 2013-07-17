@@ -10,6 +10,13 @@
 
 @implementation RBTAnnotationMap
 @synthesize coordinate;
+
+/*  initWithCoordinate
+ CALLED:This method is being called when we create a new annotation point for the map
+ IN: coord--> coordinates of the annotation to display
+ OUT: id--> itself
+ DO: It initilize a annotation point in the map
+ */
 - (id) initWithCoordinate:(CLLocationCoordinate2D)coord
 {
    coordinate = coord;

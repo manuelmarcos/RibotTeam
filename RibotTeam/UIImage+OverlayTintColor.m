@@ -10,6 +10,12 @@
 
 @implementation UIImage (OverlayTintColor)
 
+/* overlayTintColor
+ CALLED:This method is being called when we want to overlay a PNG image.
+ IN: tintColor--> UIColor to tint the image
+ OUT: UIImage--> returns the image with a color overlay 
+ DO: it overlays a PNG image with a color given.
+ */
 - (UIImage *)overlayTintColor:(UIColor *)tintColor{
    
    //  Create rect to fit the PNG image

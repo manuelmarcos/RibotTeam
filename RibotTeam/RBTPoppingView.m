@@ -10,7 +10,7 @@
 
 @implementation RBTPoppingView
 
-/*
+/* attachPopUpAnimation
  CALLED:This method is being called when we have to DISPLAY the subview and start the animation
  IN:
  OUT: void
@@ -47,10 +47,10 @@
    animation.removedOnCompletion = NO;
    animation.duration = .7;
    
-   [self.layer addAnimation:animation forKey:@"popup"];
+   [self.layer addAnimation:animation forKey:@"popup"];//we give it a name to know which animation is
 }
 
-/*
+/* attachPopOutAnimation
  CALLED:This method is being called when we have to REMOVE the subview and start the animation
  IN:
  OUT: void
@@ -88,10 +88,10 @@
    animation.removedOnCompletion = NO;
    animation.duration = .7;
    
-   [self.layer addAnimation:animation forKey:@"popout"];
+   [self.layer addAnimation:animation forKey:@"popout"];//we give it a name to know which animation is
 }
 
-/*
+/* animationDidStop
  CALLED:This method is being called when the animation is finished
  IN: theAnimation--> the animation which just finished; flag--> it tells you the state 
  OUT: void
@@ -103,12 +103,9 @@
    {
       self.hidden=YES;
    }
-   
-   
-   
 }
 
-/*
+/* animationDidStart
  CALLED:This method is being called when the animation starts
  IN: theAnimation--> the animation which just started; 
  OUT: void

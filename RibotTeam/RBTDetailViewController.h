@@ -42,6 +42,7 @@
 
 @property (strong, nonatomic) RBTDownloadOperation *downloadOperation;
 -(void)setDownloadOperation:(RBTDownloadOperation *)downloadOperationTo;
+-(BOOL)checkInternet;
 - (void)initLoader;
 -(void)startLoader;
 -(void)stopLoader;

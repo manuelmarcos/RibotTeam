@@ -28,7 +28,7 @@
 @property (nonatomic,retain)  RBTPoppingView *poppingView;
 
 @property (strong, nonatomic) RBTDownloadOperation *downloadOperation;
-
+-(BOOL)checkInternet;
 -(void)configureView;
 - (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath;
 -(void)setDownloadOperation:(RBTDownloadOperation *)downloadOperationTo;

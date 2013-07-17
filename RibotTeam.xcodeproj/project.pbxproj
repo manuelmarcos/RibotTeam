@@ -84,6 +84,9 @@
 		314A02BB179177BD002C09E4 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 314A0288179177BD002C09E4 /* CoreData.framework */; };
 		314A02C3179177BD002C09E4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 314A02C1179177BD002C09E4 /* InfoPlist.strings */; };
 		314A02C6179177BD002C09E4 /* RibotTeamTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 314A02C5179177BD002C09E4 /* RibotTeamTests.m */; };
+		316364E01796BC3A009B1315 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 316364DF1796BC3A009B1315 /* Reachability.m */; };
+		316364E11796BC3A009B1315 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 316364DF1796BC3A009B1315 /* Reachability.m */; };
+		316364E31796BC4D009B1315 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316364E21796BC4D009B1315 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -181,6 +184,9 @@
 		314A02C2179177BD002C09E4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		314A02C4179177BD002C09E4 /* RibotTeamTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RibotTeamTests.h; sourceTree = "<group>"; };
 		314A02C5179177BD002C09E4 /* RibotTeamTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RibotTeamTests.m; sourceTree = "<group>"; };
+		316364DE1796BC3A009B1315 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		316364DF1796BC3A009B1315 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		316364E21796BC4D009B1315 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +194,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				316364E31796BC4D009B1315 /* SystemConfiguration.framework in Frameworks */,
 				3136AD01179616D500704973 /* MessageUI.framework in Frameworks */,
 				3136ACF71795B7DD00704973 /* QuartzCore.framework in Frameworks */,
 				313CB93C1794A9E500FFC5CB /* ImageIO.framework in Frameworks */,
@@ -280,10 +287,11 @@
 		313CB8F01794A5B400FFC5CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				313CB9071794A94600FFC5CB /* SDWebImage */,
 				313CB8F31794A5EA00FFC5CB /* Categories */,
 				313CB8F21794A5E100FFC5CB /* Operations */,
 				313CB8F11794A5DB00FFC5CB /* Maps */,
+				316364DD1796BC2B009B1315 /* Reachability */,
+				313CB9071794A94600FFC5CB /* SDWebImage */,
 				313CB93D1794AE4D00FFC5CB /* Assets */,
 			);
 			name = Resources;
@@ -380,6 +388,7 @@
 		314A0281179177BD002C09E4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				316364E21796BC4D009B1315 /* SystemConfiguration.framework */,
 				3136ACF61795B7DD00704973 /* QuartzCore.framework */,
 				313CB93B1794A9E500FFC5CB /* ImageIO.framework */,
 				313CB9391794A9DF00FFC5CB /* MapKit.framework */,
@@ -481,6 +490,15 @@
 				314A02A3179177BD002C09E4 /* RBTDetailViewController.m */,
 			);
 			name = CONTROLLER;
+			sourceTree = "<group>";
+		};
+		316364DD1796BC2B009B1315 /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				316364DE1796BC3A009B1315 /* Reachability.h */,
+				316364DF1796BC3A009B1315 /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -639,6 +657,7 @@
 				313CB92F1794A96C00FFC5CB /* UIButton+WebCache.m in Sources */,
 				3136ACF31795B2BA00704973 /* RBTPoppingView.m in Sources */,
 				3136ACFA1795C3E600704973 /* Employee.m in Sources */,
+				316364E01796BC3A009B1315 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -657,6 +676,7 @@
 				313CB92C1794A96C00FFC5CB /* SDWebImageManager.m in Sources */,
 				313CB92E1794A96C00FFC5CB /* SDWebImagePrefetcher.m in Sources */,
 				313CB9301794A96C00FFC5CB /* UIButton+WebCache.m in Sources */,
+				316364E11796BC3A009B1315 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

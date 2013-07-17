@@ -10,6 +10,12 @@
 
 @implementation UIColor (UIColor_HexColor)
 
+/* colorWithHexValue
+ CALLED:This method is being called when we want to change a HEXCOLOR into a UIColor
+ IN: hexValue--> hex value for the color 
+ OUT: UIColor--> the uicolor from the hexcolor
+ DO: hide the view with an animation
+ */
 + (UIColor*)colorWithHexValue:(NSString*)hexValue
 {
    UIColor *defaultResult = [UIColor blackColor];
