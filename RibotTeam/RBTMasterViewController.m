@@ -26,6 +26,8 @@
 @synthesize poppingView;
 
 
+#pragma mark - Life Cycle
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -49,11 +51,32 @@
     [super dealloc];
 }
 
+
+- (void)didReceiveMemoryWarning
+{
+   [super didReceiveMemoryWarning];
+   // Dispose of any resources that can be recreated.
+}
+
+
 -(void)viewWillAppear:(BOOL)animated{
    [super viewWillAppear:YES];
    self.navigationController.navigationBar.tintColor=[UIColor colorWithHexValue:@"#00a8e0"];
    
 }
+
+- (void)viewDidLoad
+{
+   [super viewDidLoad];
+   
+   //set up the view with the different components that we have
+   [self configureView];
+   //call to the nsoperation to download the data
+   [self getDataRequest];
+   
+}
+
+#pragma mark - Configure Views
 
 -(void)configureView{
    
@@ -99,16 +122,8 @@
    }
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-   
-   //set up the view with the different components that we have
-   [self configureView];
-   //call to the nsoperation to download the data
-   [self getDataRequest];
+#pragma mark - Operations
 
-}
 
 -(void)infoButtonAction{
    
@@ -123,9 +138,12 @@
       [[NSOperationQueue mainQueue] addOperation:op];
       [self setDownloadOperation:op]; //Hold onto a reference in case we want to cancel it
       [op release], op = nil;
-      
+      [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
+
    }
 }
+
+
 -(void)getDataRequest{
    
    
@@ -135,6 +153,7 @@
    [self setDownloadOperation:op]; //Hold onto a reference in case we want to cancel it
    [op release], op = nil;
    // we display the loader for the table view in order to let the user know that the data is being downloaded
+   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
    [refreshControlView beginRefreshing];
    
 }
@@ -147,6 +166,7 @@
 }
 - (void)operation:(RBTDownloadOperation*)operation didFailWithError:(NSError*)error;
 {
+   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
    [self setDownloadOperation:nil];
    if([operation.tagOperation isEqualToString:@"info_studio"]){
       DLog(@"Download complete for studio");
@@ -171,6 +191,7 @@
 
 - (void)operation:(RBTDownloadOperation*)operation didCompleteWithData:(NSData*)data;
 {
+   [[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
    [self setDownloadOperation:nil];
    NSError *jsonError = nil;
    id jsonObject = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&jsonError];
@@ -271,6 +292,9 @@
    }
 }
 
+#pragma mark - Core Data
+
+
 -(BOOL)validateEmployee:(NSString *) value error:(NSError *) error {
    
    // Validate uniqueness of my_unique_id
@@ -299,14 +323,6 @@
 }
 
 
-
-
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 
 - (void)insertNewObject:(id)sender
@@ -432,6 +448,31 @@
         self.detailViewController.detailEmployee = employee;
     }
 }
+- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
+{
+   
+   Employee *employee = [self.fetchedResultsController objectAtIndexPath:indexPath];
+   cell.textLabel.text = employee.firstName;
+   cell.detailTextLabel.text=employee.role;
+   cell.detailTextLabel.text=employee.role;
+   cell.textLabel.textColor=[UIColor colorWithHexValue:employee.hexColor];
+   cell.detailTextLabel.textColor=[UIColor colorWithHexValue:employee.hexColor];
+   //create the url
+   
+   UIImageView *imageViewArrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tableViewArrow"] overlayTintColor:[UIColor colorWithHexValue:employee.hexColor]]];
+   imageViewArrow.frame=CGRectMake(0, 0, 30, 30);
+   cell.accessoryView=imageViewArrow;
+   [imageViewArrow release];
+   
+   
+   NSString *urlPathAvatar=[NSString stringWithFormat:@"http://theribots.nodejitsu.com/api/team/%@/ribotar",employee.id];
+   
+   [cell.imageView setImageWithURL:[NSURL URLWithString:urlPathAvatar]
+                  placeholderImage:[[UIImage imageNamed:@"defaultRibot"] overlayTintColor:[UIColor colorWithHexValue:employee.hexColor]] options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
+                     //DLog(@"COMPLETADISIMO %@ %f %f",error,image.size.height,image.size.width);
+                  }
+    ];
+}
 
 #pragma mark - Fetched results controller
 
@@ -532,30 +573,6 @@
 }
  */
 
-- (void)configureCell:(UITableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath
-{
-   
-   Employee *employee = [self.fetchedResultsController objectAtIndexPath:indexPath];
-   cell.textLabel.text = employee.firstName;
-   cell.detailTextLabel.text=employee.role;
-   cell.detailTextLabel.text=employee.role;
-   cell.textLabel.textColor=[UIColor colorWithHexValue:employee.hexColor];
-   cell.detailTextLabel.textColor=[UIColor colorWithHexValue:employee.hexColor];
-   //create the url
-   
-   UIImageView *imageViewArrow=[[UIImageView alloc] initWithImage:[[UIImage imageNamed:@"tableViewArrow"] overlayTintColor:[UIColor colorWithHexValue:employee.hexColor]]];
-   imageViewArrow.frame=CGRectMake(0, 0, 30, 30);
-   cell.accessoryView=imageViewArrow;
-   [imageViewArrow release];
 
-   
-   NSString *urlPathAvatar=[NSString stringWithFormat:@"http://theribots.nodejitsu.com/api/team/%@/ribotar",employee.id];
-   
-   [cell.imageView setImageWithURL:[NSURL URLWithString:urlPathAvatar]
-                  placeholderImage:[[UIImage imageNamed:@"defaultRibot"] overlayTintColor:[UIColor colorWithHexValue:employee.hexColor]] options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
-                     //DLog(@"COMPLETADISIMO %@ %f %f",error,image.size.height,image.size.width);
-                  }
-    ];
-}
 
 @end

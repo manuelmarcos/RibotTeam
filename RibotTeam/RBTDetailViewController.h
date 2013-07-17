@@ -38,6 +38,8 @@
 @property (nonatomic, retain) IBOutlet UIImageView *profilePicture;
 @property (nonatomic, retain) IBOutlet MKMapView *mapView;
 @property (nonatomic, retain)  UIImageView *activityImageView;
+@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+
 @property (strong, nonatomic) RBTDownloadOperation *downloadOperation;
 -(void)setDownloadOperation:(RBTDownloadOperation *)downloadOperationTo;
 - (void)initLoader;

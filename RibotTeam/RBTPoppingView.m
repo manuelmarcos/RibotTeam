@@ -9,6 +9,13 @@
 #import "RBTPoppingView.h"
 
 @implementation RBTPoppingView
+
+/*
+ CALLED:This method is being called when we have to DISPLAY the subview and start the animation
+ IN:
+ OUT: void
+ DO: It scales the image in different sizes and makes the animation
+ */
 - (void) attachPopUpAnimation
 {
    CAKeyframeAnimation *animation = [CAKeyframeAnimation
@@ -43,6 +50,12 @@
    [self.layer addAnimation:animation forKey:@"popup"];
 }
 
+/*
+ CALLED:This method is being called when we have to REMOVE the subview and start the animation
+ IN:
+ OUT: void
+ DO: It scales the image in different sizes and makes the animation
+ */
 - (void) attachPopOutAnimation
 {
    
@@ -77,6 +90,7 @@
    
    [self.layer addAnimation:animation forKey:@"popout"];
 }
+
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
    if (theAnimation == [[self layer] animationForKey:@"popout"])

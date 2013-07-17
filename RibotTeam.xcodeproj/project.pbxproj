@@ -22,6 +22,7 @@
 		3136ACF51795B6CA00704973 /* poppyView@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3136ACF41795B6CA00704973 /* poppyView@2x.png */; };
 		3136ACF71795B7DD00704973 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3136ACF61795B7DD00704973 /* QuartzCore.framework */; };
 		3136ACFA1795C3E600704973 /* Employee.m in Sources */ = {isa = PBXBuildFile; fileRef = 3136ACF91795C3E600704973 /* Employee.m */; };
+		3136AD01179616D500704973 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9351794A9D000FFC5CB /* MessageUI.framework */; };
 		313CB8F61794A62F00FFC5CB /* UIColor+UIColor_HexColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 313CB8F51794A62F00FFC5CB /* UIColor+UIColor_HexColor.m */; };
 		313CB8F91794A67800FFC5CB /* UIImage+OverlayTintColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 313CB8F81794A67800FFC5CB /* UIImage+OverlayTintColor.m */; };
 		313CB9031794A79500FFC5CB /* RBTDownloadOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 313CB9021794A79500FFC5CB /* RBTDownloadOperation.m */; };
@@ -48,7 +49,6 @@
 		313CB9301794A96C00FFC5CB /* UIButton+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 313CB91C1794A96C00FFC5CB /* UIButton+WebCache.m */; };
 		313CB9331794A9C900FFC5CB /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9311794A9C900FFC5CB /* AddressBook.framework */; };
 		313CB9341794A9C900FFC5CB /* AddressBookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9321794A9C900FFC5CB /* AddressBookUI.framework */; };
-		313CB9361794A9D000FFC5CB /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9351794A9D000FFC5CB /* MessageUI.framework */; };
 		313CB9381794A9D800FFC5CB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9371794A9D700FFC5CB /* CoreLocation.framework */; };
 		313CB93A1794A9DF00FFC5CB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB9391794A9DF00FFC5CB /* MapKit.framework */; };
 		313CB93C1794A9E500FFC5CB /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 313CB93B1794A9E500FFC5CB /* ImageIO.framework */; };
@@ -188,11 +188,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3136AD01179616D500704973 /* MessageUI.framework in Frameworks */,
 				3136ACF71795B7DD00704973 /* QuartzCore.framework in Frameworks */,
 				313CB93C1794A9E500FFC5CB /* ImageIO.framework in Frameworks */,
 				313CB93A1794A9DF00FFC5CB /* MapKit.framework in Frameworks */,
 				313CB9381794A9D800FFC5CB /* CoreLocation.framework in Frameworks */,
-				313CB9361794A9D000FFC5CB /* MessageUI.framework in Frameworks */,
 				313CB9331794A9C900FFC5CB /* AddressBook.framework in Frameworks */,
 				313CB9341794A9C900FFC5CB /* AddressBookUI.framework in Frameworks */,
 				314A0283179177BD002C09E4 /* UIKit.framework in Frameworks */,
@@ -231,14 +231,60 @@
 			name = Loader;
 			sourceTree = "<group>";
 		};
+		3136ACFB1795EB0500704973 /* PoppyView */ = {
+			isa = PBXGroup;
+			children = (
+				3136ACF41795B6CA00704973 /* poppyView@2x.png */,
+			);
+			name = PoppyView;
+			sourceTree = "<group>";
+		};
+		3136ACFC1795EB1000704973 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				313CB9761794C7C400FFC5CB /* ribotTeamIconSmall.png */,
+				313CB9771794C7C400FFC5CB /* ribotTeamIconBig.png */,
+			);
+			name = Icons;
+			sourceTree = "<group>";
+		};
+		3136ACFD1795EB2000704973 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				313CB9621794BDCF00FFC5CB /* tableViewArrow.png */,
+				313CB9631794BDCF00FFC5CB /* tableViewArrow@2x.png */,
+				313CB94A1794B25600FFC5CB /* defaultRibot@2x.png */,
+				313CB94D1794B2C500FFC5CB /* defaultRibot.png */,
+			);
+			name = TableView;
+			sourceTree = "<group>";
+		};
+		3136ACFE1796042100704973 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+				314A02A8179177BD002C09E4 /* RBTMasterViewController_iPad.xib */,
+				314A02AE179177BD002C09E4 /* RBTDetailViewController_iPad.xib */,
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
+		3136ACFF1796043400704973 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				314A02A5179177BD002C09E4 /* RBTMasterViewController_iPhone.xib */,
+				314A02AB179177BD002C09E4 /* RBTDetailViewController_iPhone.xib */,
+			);
+			name = iPhone;
+			sourceTree = "<group>";
+		};
 		313CB8F01794A5B400FFC5CB /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				313CB93D1794AE4D00FFC5CB /* Assets */,
 				313CB9071794A94600FFC5CB /* SDWebImage */,
 				313CB8F31794A5EA00FFC5CB /* Categories */,
 				313CB8F21794A5E100FFC5CB /* Operations */,
 				313CB8F11794A5DB00FFC5CB /* Maps */,
+				313CB93D1794AE4D00FFC5CB /* Assets */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -303,14 +349,10 @@
 		313CB93D1794AE4D00FFC5CB /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3136ACF41795B6CA00704973 /* poppyView@2x.png */,
+				3136ACFD1795EB2000704973 /* TableView */,
+				3136ACFC1795EB1000704973 /* Icons */,
+				3136ACFB1795EB0500704973 /* PoppyView */,
 				3136ACDD17959EE300704973 /* Loader */,
-				313CB9761794C7C400FFC5CB /* ribotTeamIconSmall.png */,
-				313CB9771794C7C400FFC5CB /* ribotTeamIconBig.png */,
-				313CB9621794BDCF00FFC5CB /* tableViewArrow.png */,
-				313CB9631794BDCF00FFC5CB /* tableViewArrow@2x.png */,
-				313CB94A1794B25600FFC5CB /* defaultRibot@2x.png */,
-				313CB94D1794B2C500FFC5CB /* defaultRibot.png */,
 			);
 			name = Assets;
 			sourceTree = "<group>";
@@ -422,12 +464,10 @@
 		314A02D117917812002C09E4 /* VIEW */ = {
 			isa = PBXGroup;
 			children = (
-				314A02A5179177BD002C09E4 /* RBTMasterViewController_iPhone.xib */,
-				314A02A8179177BD002C09E4 /* RBTMasterViewController_iPad.xib */,
-				314A02AB179177BD002C09E4 /* RBTDetailViewController_iPhone.xib */,
-				314A02AE179177BD002C09E4 /* RBTDetailViewController_iPad.xib */,
 				3136ACF11795B2BA00704973 /* RBTPoppingView.h */,
 				3136ACF21795B2BA00704973 /* RBTPoppingView.m */,
+				3136ACFF1796043400704973 /* iPhone */,
+				3136ACFE1796042100704973 /* iPad */,
 			);
 			name = VIEW;
 			sourceTree = "<group>";
