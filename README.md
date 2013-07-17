@@ -100,10 +100,6 @@ Resources
 ---------
 This folder has another six folders more: 
    
-   * **Reachability** It demonstrates how to know when IP can be routed and when traffic will be routed through a Wireless Wide Area Network (WWAN) interface such as EDGE or 3G.
-
-   * **SDWebImage** We can find this library [here](https://github.com/rs/SDWebImage). It is a great library for download web images asynchronously.
-   
    * **Categories** An Objective-C category allows us to add methods to an existing class—effectively subclassing it without having to deal with the possible complexities of subclassing.
    
       * UIColor+UIColor_HexColor.h/.m is a category of UIColor and it implements a method which, changes HexColors into UIColors
@@ -116,7 +112,11 @@ This folder has another six folders more:
    * **Maps**
    
       * RBTAnnotationMap.h/.m is just a MKAnnotation protocol which, is used to provide annotation-related information to a map view. In this case, the location of the ribot team member.
-      
+    
+   * **Reachability** It demonstrates how to know when IP can be routed and when traffic will be routed through a Wireless Wide Area Network (WWAN) interface such as EDGE or 3G.
+
+   * **SDWebImage** We can find this library [here](https://github.com/rs/SDWebImage). It is a great library for download web images asynchronously.
+  
    * **Assets**
    
       * Most of the assets are available for retina and non-retina display.
