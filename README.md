@@ -25,7 +25,7 @@ where I have organized the classes depending on their type.
 ![alt tag](http://emiliaregalado.com/ribotChallenge/navigationBar.png)
 
 FIND METHODS: 
-"pragma marks" is a very useful functionality in Xcode when you are navigating within a class.
+"pragma marks" is a very useful functionality in Xcode when we are navigating within a class.
 
 We can find them here:
 
@@ -40,7 +40,7 @@ Each pragma mark has a list of methods
 WHAT DO THEY DO? 
 In order to make our lifes even easier, I have made a comment on top of every method which, follows this protocol:
 
-* CALLED: it tells you when this method could be called
+* CALLED: it tells us when this method could be called
 * IN: What parameters the method gets
 * OUT: What parameters the method returns
 * DO: What the method does
