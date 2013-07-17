@@ -98,7 +98,7 @@ Now, -> Go to RibotTeam.xcodeproj--> RibotTeam --> **Resources**
 
 Resources
 ---------
-This folder has another five folders more: 
+This folder has another six folders more: 
    
    * **Reachability** It demonstrates how to know when IP can be routed and when traffic will be routed through a Wireless Wide Area Network (WWAN) interface such as EDGE or 3G.
 
@@ -155,7 +155,8 @@ Frameworks
 
 
 
-
+Improvements
+============
 
 
 
