@@ -91,6 +91,12 @@
    [self.layer addAnimation:animation forKey:@"popout"];
 }
 
+/*
+ CALLED:This method is being called when the animation is finished
+ IN: theAnimation--> the animation which just finished; flag--> it tells you the state 
+ OUT: void
+ DO: It hides the animation view
+ */
 - (void)animationDidStop:(CAAnimation *)theAnimation finished:(BOOL)flag
 {
    if (theAnimation == [[self layer] animationForKey:@"popout"])
@@ -101,6 +107,13 @@
    
    
 }
+
+/*
+ CALLED:This method is being called when the animation starts
+ IN: theAnimation--> the animation which just started; 
+ OUT: void
+ DO: It displays the animation view
+ */
 - (void)animationDidStart:(CAAnimation *)theAnimation
 {
    if (theAnimation == [[self layer] animationForKey:@"popup"])
