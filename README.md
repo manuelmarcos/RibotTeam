@@ -161,7 +161,9 @@ Frameworks
 Improvements & Evaluation
 =========================
 
-There are three main things in the design that I would like to improve but I haven´t had time to do.
+There are four main things in the design that I would like to improve but I haven´t had time to do.
+   
+   * **Instruments** I wanted to use this Xcode tool. It helps you finding memory leaks.
 
    * **PoppingView** is one of them. This view is being added on top of the table view instead of the actual view and that is why it could look broken if you scroll down. We have to change the **RBTMasterViewController_iPhone.xib** in order to do this. It is not a major change but it will affect to the controller **RBTMasterViewController**
 
@@ -176,5 +178,5 @@ Lastly, I did a small research at the beginning in order to compare different ap
    * App Icon: It just has a letter and a color. Simple and clear like google App, Vine App, Wikipedia App, tumblr App ... 
    * Launch screen: It is an empty table view. Such as twitter App, notes App, foursquare App ...
 
-I am quite happy with the result, It is colorful and smooth.
+I am quite happy with the result, It is colorful and smooth. Hope you enjoy it too!!!
 
