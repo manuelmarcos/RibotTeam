@@ -45,7 +45,7 @@
    
    animation.fillMode = kCAFillModeForwards;
    animation.removedOnCompletion = NO;
-   animation.duration = .7;
+   animation.duration = .5;
    
    [self.layer addAnimation:animation forKey:@"popup"];//we give it a name to know which animation is
 }
@@ -86,7 +86,7 @@
    
    animation.fillMode = kCAFillModeForwards;
    animation.removedOnCompletion = NO;
-   animation.duration = .7;
+   animation.duration = .5;
    
    [self.layer addAnimation:animation forKey:@"popout"];//we give it a name to know which animation is
 }

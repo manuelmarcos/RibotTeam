@@ -50,7 +50,7 @@
    [super viewWillAppear:YES];
    
    //create a new request to get team info
-   NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://theribots.nodejitsu.com/api/team/%@",_detailEmployee.id]]];
+   NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:GetEmployeeInfoAPIServer,_detailEmployee.id]]];
    //assign that request to an operation and we give it a TAGOperation cos we might have more than one in the queue and we need to differentiate them
    RBTDownloadOperation *op = [[RBTDownloadOperation alloc] initWithURLRequest:request andDelegate:self andTagOperation:@"info_team"];
    [[NSOperationQueue mainQueue] addOperation:op];// add the operation to the queue
@@ -233,7 +233,7 @@
          [self setUpLocationMap:@"Brighton, UK"];
       }
       //we download the web image with the SDWebImage and overlay the default image with our category
-      NSString *urlPathAvatar=[NSString stringWithFormat:@"http://theribots.nodejitsu.com/api/team/%@/ribotar",self.detailEmployee.id];      
+      NSString *urlPathAvatar=[NSString stringWithFormat:GetRibotarAPIServer,self.detailEmployee.id];      
       [self.profilePicture setImageWithURL:[NSURL URLWithString:urlPathAvatar] placeholderImage:[[UIImage imageNamed:@"defaultRibot.png"] overlayTintColor:[UIColor colorWithHexValue:self.detailEmployee.hexColor]] options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {         
       }];
    }
@@ -290,7 +290,7 @@
       if([self checkInternet]==TRUE){
          UIAlertView *alert;
          alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                            message:@"Failure to download"
+                                            message:ErrorOperation
                                            delegate:self cancelButtonTitle:@"Ok"
                                   otherButtonTitles:nil];
          [alert show];
@@ -298,7 +298,7 @@
       }else{
          UIAlertView *alert;
          alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                            message:@"No Internet Connection"
+                                            message:ErrorInternet
                                            delegate:self cancelButtonTitle:@"Ok"
                                   otherButtonTitles:nil];
          [alert show];
@@ -315,7 +315,7 @@
          if([self checkInternet]==TRUE){
             UIAlertView *alert;
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                               message:@"Failure to download"
+                                               message:ErrorOperation
                                               delegate:self cancelButtonTitle:@"Ok"
                                      otherButtonTitles:nil];
             [alert show];
@@ -323,7 +323,7 @@
          }else{
             UIAlertView *alert;
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                               message:@"No Internet Connection"
+                                               message:ErrorInternet
                                               delegate:self cancelButtonTitle:@"Ok"
                                      otherButtonTitles:nil];
             [alert show];
@@ -398,7 +398,7 @@
           abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
           */
          DLog(@"Unresolved error %@, %@", error, [error userInfo]);
-         abort();
+         //abort();
       }
       //2. Update the UITableViewDataSource with the new data
       //Note: We MIGHT be on a background thread here.
@@ -546,7 +546,7 @@
       UIAlertView *alert;
       
       alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                         message:@"You denied access to your Contacts. Please update your privacy settings"
+                                         message:ErrorTwitterAccess
                                         delegate:self cancelButtonTitle:@"Ok"
                                otherButtonTitles:nil];
       
@@ -570,12 +570,22 @@
          [[UIApplication sharedApplication] openURL:[NSURL URLWithString:twitterUser]];
          
       }
-      
+      else{
+         UIAlertView *alert;
+         
+         alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                            message:ErrorTwitterApp
+                                           delegate:self cancelButtonTitle:@"Ok"
+                                  otherButtonTitles:nil];
+         
+         [alert show];
+         [alert release];
+      }
    }else{
       UIAlertView *alert;
       
       alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                         message:@"The user does not have twitter info"
+                                         message:ErrorTwitterInfo
                                         delegate:self cancelButtonTitle:@"Ok"
                                otherButtonTitles:nil];
       

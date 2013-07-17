@@ -194,7 +194,7 @@
       //display de the view with animation
       [poppingView attachPopUpAnimation];
       //create a new request to get studio info
-      NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://theribots.nodejitsu.com/api/studio"]];
+      NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:GetStudioInfoAPIServer]];
       //assign that request to an operation and we give it a TAGOperation cos we might have more than one in the queue and we need to differentiate them
       RBTDownloadOperation *op = [[RBTDownloadOperation alloc] initWithURLRequest:request andDelegate:self andTagOperation:@"info_studio"];
       [[NSOperationQueue mainQueue] addOperation:op];// add the operation to the queue
@@ -212,7 +212,7 @@
  */
 -(void)getDataRequest{
    //create a new request to get team info
-   NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"http://theribots.nodejitsu.com/api/team"]];
+   NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:GetTeamInfoAPIServer]];
    //assign that request to an operation and we give it a TAGOperation cos we might have more than one in the queue and we need to differentiate them
    RBTDownloadOperation *op = [[RBTDownloadOperation alloc] initWithURLRequest:request andDelegate:self andTagOperation:@"info_team"];
    [[NSOperationQueue mainQueue] addOperation:op];// add the operation to the queue
@@ -256,7 +256,7 @@
       if([self checkInternet]==TRUE){
          UIAlertView *alert;
          alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                            message:@"Failure to download"
+                                            message:ErrorOperation
                                            delegate:self cancelButtonTitle:@"Ok"
                                   otherButtonTitles:nil];
          [alert show];
@@ -264,7 +264,7 @@
       }else{
          UIAlertView *alert;
          alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                            message:@"No Internet Connection"
+                                            message:ErrorInternet
                                            delegate:self cancelButtonTitle:@"Ok"
                                   otherButtonTitles:nil];
          [alert show];
@@ -282,7 +282,7 @@
          if([self checkInternet]==TRUE){
             UIAlertView *alert;
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                               message:@"Failure to download"
+                                               message:ErrorOperation
                                               delegate:self cancelButtonTitle:@"Ok"
                                      otherButtonTitles:nil];
             [alert show];
@@ -290,7 +290,7 @@
          }else{
             UIAlertView *alert;
             alert = [[UIAlertView alloc] initWithTitle:@"Error"
-                                               message:@"No Internet Connection"
+                                               message:ErrorInternet
                                               delegate:self cancelButtonTitle:@"Ok"
                                      otherButtonTitles:nil];
             [alert show];
@@ -495,7 +495,7 @@
       // Replace this implementation with code to handle the error appropriately.
       // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
       DLog(@"Unresolved error %@, %@", error, [error userInfo]);
-      abort();
+      //abort();
    }
 }
 
@@ -580,7 +580,7 @@
          // Replace this implementation with code to handle the error appropriately.
          // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
          DLog(@"Unresolved error %@, %@", error, [error userInfo]);
-         abort();
+         //abort();
       }
    }
 }
@@ -642,7 +642,7 @@
    [imageViewArrow release];
    
    //we download the web image using SDWebImage library and overlay the default image with our category
-   NSString *urlPathAvatar=[NSString stringWithFormat:@"http://theribots.nodejitsu.com/api/team/%@/ribotar",employee.id];   
+   NSString *urlPathAvatar=[NSString stringWithFormat:GetRibotarAPIServer,employee.id];   
    [cell.imageView setImageWithURL:[NSURL URLWithString:urlPathAvatar]
                   placeholderImage:[[UIImage imageNamed:@"defaultRibot"] overlayTintColor:[UIColor colorWithHexValue:employee.hexColor]] options:0 completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType) {
                      DLog(@"IMAGE DOWNLOADED");
@@ -683,7 +683,7 @@
       // Replace this implementation with code to handle the error appropriately.
       // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
       NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-      abort();
+      //abort();
    }
    
    return _fetchedResultsController;

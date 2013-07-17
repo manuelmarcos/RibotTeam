@@ -16,6 +16,8 @@
 
 #import "RBTPoppingView.h"
 
+#import "RBTAppDelegate.h"
+
 @class RBTDetailViewController;
 
 @interface RBTMasterViewController : UITableViewController <NSFetchedResultsControllerDelegate,RBTDownloadOperation>
