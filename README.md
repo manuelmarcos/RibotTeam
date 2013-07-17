@@ -98,7 +98,10 @@ Now, -> Go to RibotTeam.xcodeproj--> RibotTeam --> **Resources**
 
 Resources
 ---------
-This folder has another four folders more: 
+This folder has another five folders more: 
+   
+   * **Reachability** It demonstrates how to know when IP can be routed and when traffic will be routed through a Wireless Wide Area Network (WWAN) interface such as EDGE or 3G.
+
    * **SDWebImage** We can find this library [here](https://github.com/rs/SDWebImage). It is a great library for download web images asynchronously.
    
    * **Categories** An Objective-C category allows us to add methods to an existing class—effectively subclassing it without having to deal with the possible complexities of subclassing.
@@ -146,6 +149,8 @@ Frameworks
 **CoreData.framework**  contains interfaces for managing your application’s data model. It is being used by Employee, RBTMasterViewController, Prefix.pch
 
 **SenTestingKit.framework** provides a set of classes and command-line tools that let you design test suites and run them on your code. Not being used yet.
+
+**SystemConfiguration.framework** contains interfaces for determining the network configuration of a device.
 
 
 
