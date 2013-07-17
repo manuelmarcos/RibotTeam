@@ -1,14 +1,16 @@
 RibotTeam
 =========
 
-RibotTeam is an iPhone App which, has a list of ribot team members with their details info. 
-It uses a Rest API and It could have been implemented with the [restKit](https://github.com/RestKit/RestKit) for iOS but I considered that this project is not big enough to use such a big framework.
+RibotTeam is an iPhone App that has a list of ribot team members, with the option to tap through to see their details.
 
-Also, This project has been set up for iPad environment. It already has some settings and code for iPad implementation and it is quite simple to extend the project for iPad development.
+It uses a Rest API and could have been implemented with the [restKit](https://github.com/RestKit/RestKit) for iOS. However, I considered that this project is not big enough to use such a heavy framework.
+
+Additionally, this project has been set up for a potential iPad app. It already has some settings and code, and would be quite simple to extend the project for iPad implementation.
 
 Requirements:
 ============
-In order to install this application into your iPhone or simulator you have to have:
+
+In order to install this application into your iPhone or simulator you need:
 
    Xcode 4.6 or later
 
@@ -25,7 +27,7 @@ where I have organized the classes depending on their type.
 ![alt tag](http://emiliaregalado.com/ribotChallenge/navigationBar.png)
 
 FIND METHODS: 
-"pragma marks" is a very useful functionality in Xcode when we are navigating within a class.
+"pragma marks" is a very useful feature in Xcode when we are navigating within a class.
 
 We can find them here:
 
@@ -38,7 +40,8 @@ Each pragma mark has a list of methods
 
 
 WHAT DO THEY DO? 
-In order to make our lifes even easier, I have made a comment on top of every method which, follows this protocol:
+In order to make our lives easier, I have commented every method, following this protocol:
+
 
 * CALLED: it tells us when this method could be called
 * IN: What parameters the method gets
@@ -46,7 +49,7 @@ In order to make our lifes even easier, I have made a comment on top of every me
 * DO: What the method does
 
 The last tip is about Debug info.
-If we open **RibotTeam-Prefix.pch** we could see that we have defined a DEBUG flag for print out info through Xcode console. In this case, whenever the App is ready for distribution we will only have to change that flag instead of remove all the debug info.
+If we open **RibotTeam-Prefix.pch** we could see that we have defined a DEBUG flag for print out info through Xcode console. In this case, whenever the App is ready for distribution we will only have to change that flag instead of removing all the debug info.
 
 
 Navigation:
@@ -81,14 +84,14 @@ As we said at the beginning, we have already set up few settings for iPad develo
 
 **RBTMasterViewController_iPhone.xib**  represents our table view which is the first view to be displayed.
 
-**RBTDetailViewController_iPhone.xib**  represents our detail view which will display the detail info of each ribot team member.
+**RBTDetailViewController_iPhone.xib**  represents our detail view which will display the details of each ribot team member.
 
 Controller
 ----------
 
-**RBTMasterViewController.h/.m** is our first controller to be loaded. It deals (insert/edit/delete) with the Model (Employee.h/.m) and display content on the view (RBTMasterViewController_iPhone.xib)
+**RBTMasterViewController.h/.m** is our first controller to be loaded. It deals (insert/edit/delete) with the Model (Employee.h/.m) and displays content in the view (RBTMasterViewController_iPhone.xib)
 
-**RBTDetailViewController.h/.m** navigates from RBTMasterViewController.h/.m and displays the detail info of each ribot team member. It also deals with Employee.h/.m and display the content into RBTDetailViewController_iPhone.xib
+**RBTDetailViewController.h/.m** navigates from RBTMasterViewController.h/.m and displays the details of each ribot team member. It also deals with Employee.h/.m and displays the content into RBTDetailViewController_iPhone.xib
 
 
 
@@ -102,12 +105,12 @@ This folder has another six folders more:
    
    * **Categories** An Objective-C category allows us to add methods to an existing class—effectively subclassing it without having to deal with the possible complexities of subclassing.
    
-      * UIColor+UIColor_HexColor.h/.m is a category of UIColor and it implements a method which, changes HexColors into UIColors
+      * UIColor+UIColor_HexColor.h/.m is a category of UIColor and it implements a method that changes HexColors into UIColors
       * UIImage+OverlayTintColor.h/.m is a category of UIImage and it overlays a UIColor on top of a PNG image. Basically, it paints a PNG with a given UIColor. 
       
    * **Operations**
    
-      * RBTDownloadOperation.h/.m is a subclass of NSOperation and it implements a protocol which, will make our life easier when dealing with NSURLRequest. We will use it to communicate with the API. We have to be careful when we use it cos it adds the operation to the operation queue of the mainthread but does not guarantee when it will be executed. There could be other items in that queue still waiting to execute so we will have to make sure in which Thread we are when we want to change the UI.
+      * RBTDownloadOperation.h/.m is a subclass of NSOperation and it implements a protocol that will make our life easier when dealing with NSURLRequest. We will use it to communicate with the API. We have to be careful when we use it cos it adds the operation to the operation queue of the mainthread but does not guarantee when it will be executed. There could be other items in that queue still waiting to execute so we will have to make sure in which Thread we are when we want to change the UI.
       
    * **Maps**
    
@@ -115,7 +118,7 @@ This folder has another six folders more:
     
    * **Reachability** It demonstrates how to know when IP can be routed and when traffic will be routed through a Wireless Wide Area Network (WWAN) interface such as EDGE or 3G.
 
-   * **SDWebImage** We can find this library [here](https://github.com/rs/SDWebImage). It is a great library for download web images asynchronously.
+   * **SDWebImage** We can find this library [here](https://github.com/rs/SDWebImage). It is a great library for downloading web images asynchronously.
   
    * **Assets**
    
@@ -155,8 +158,10 @@ Frameworks
 
 
 
-Improvements
-============
+Improvements evaluation
+======================
 
-
-
+the popping view with the scroll
+uilabel with the scroll it should be different
+better default messages
+location string for languajes
