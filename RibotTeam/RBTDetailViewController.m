@@ -459,7 +459,7 @@
             //remove annotations from previous searches
             [self.mapView removeAnnotations:self.mapView.annotations];
             //get the first location of the array and display it in the map
-            CLLocation *location=[[placemarks objectAtIndex:0] location];
+            CLLocation *location=[placemarks objectAtIndex:0];
             RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:location.coordinate] autorelease];
             MKCoordinateRegion region;
             MKCoordinateSpan span;
@@ -477,7 +477,7 @@
                //remove annotations from previous searches
                [self.mapView removeAnnotations:self.mapView.annotations];
                //get the first location of the array and display it in the map
-               CLLocation *location=[[placemarks objectAtIndex:0] location];
+               CLLocation *location=[placemarks objectAtIndex:0];
                RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:location.coordinate] autorelease];
                MKCoordinateRegion region;
                MKCoordinateSpan span;

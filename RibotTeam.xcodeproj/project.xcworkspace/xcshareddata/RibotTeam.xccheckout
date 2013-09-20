@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B99BE4D5-65C3-4FB3-A84B-C1CA38B82C20</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RibotTeam</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>03FE3823-885C-42CB-AB2A-CA44C4A30936</key>
+		<string>https://github.com/manuelmarcos/RibotTeam.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RibotTeam.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>03FE3823-885C-42CB-AB2A-CA44C4A30936</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/manuelmarcos/RibotTeam.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>03FE3823-885C-42CB-AB2A-CA44C4A30936</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>03FE3823-885C-42CB-AB2A-CA44C4A30936</string>
+			<key>IDESourceControlWCCName</key>
+			<string>RibotTeam</string>
+		</dict>
+	</array>
+</dict>
+</plist>
