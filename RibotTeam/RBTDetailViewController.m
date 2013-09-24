@@ -459,14 +459,18 @@
             //remove annotations from previous searches
             [self.mapView removeAnnotations:self.mapView.annotations];
             //get the first location of the array and display it in the map
-            CLLocation *location=[placemarks objectAtIndex:0];
-            RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:location.coordinate] autorelease];
+            CLPlacemark *placemark = [placemarks objectAtIndex:0];
+            CLLocation *location = placemark.location;
+            CLLocationCoordinate2D coordinate = location.coordinate;
+            
+            RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:coordinate] autorelease];
             MKCoordinateRegion region;
             MKCoordinateSpan span;
             span.latitudeDelta=0.2;
+            
             span.longitudeDelta=0.2;
             region.span=span;
-            region.center=location.coordinate;
+            region.center=coordinate;
             [self.mapView addAnnotation:annotation];
             [self.mapView setRegion:region animated:TRUE];
             [self.mapView regionThatFits:region];
@@ -477,18 +481,21 @@
                //remove annotations from previous searches
                [self.mapView removeAnnotations:self.mapView.annotations];
                //get the first location of the array and display it in the map
-               CLLocation *location=[placemarks objectAtIndex:0];
-               RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:location.coordinate] autorelease];
+               CLPlacemark *placemark = [placemarks objectAtIndex:0];
+               CLLocation *location = placemark.location;
+               CLLocationCoordinate2D coordinate = location.coordinate;
+               
+               RBTAnnotationMap *annotation = [[[RBTAnnotationMap alloc] initWithCoordinate:coordinate] autorelease];
                MKCoordinateRegion region;
                MKCoordinateSpan span;
                span.latitudeDelta=0.2;
+               
                span.longitudeDelta=0.2;
                region.span=span;
-               region.center=location.coordinate;
+               region.center=coordinate;
                [self.mapView addAnnotation:annotation];
                [self.mapView setRegion:region animated:TRUE];
-               [self.mapView regionThatFits:region];
-            });
+               [self.mapView regionThatFits:region];            });
          }                  
       }
       

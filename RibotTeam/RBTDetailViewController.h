@@ -18,6 +18,8 @@
 
 #import <AddressBookUI/AddressBookUI.h>
 
+#import <CoreLocation/CoreLocation.h>
+
 #import "Employee.h"
 
 #import "RBTDownloadOperation.h"
