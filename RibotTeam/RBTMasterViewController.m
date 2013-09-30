@@ -115,6 +115,7 @@
    [refreshControlView addTarget:self action:@selector(getDataRequest) forControlEvents:UIControlEventValueChanged];
    self.refreshControl = refreshControlView;//assign the viewcontroller refreshcontrol with ours.
    
+   DLog(@"Testing");
    //add info button
    UIButton* infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
    //the method infoButtonAction will be fire when the user taps on top of the info button
