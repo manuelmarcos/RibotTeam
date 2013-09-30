@@ -1,6 +1,8 @@
 RibotTeam
 =========
 
+TEST
+
 RibotTeam is an iPhone App that has a list of ribot team members, with the option to tap through to see their details.
 
 It uses a Rest API and could have been implemented with the [restKit](https://github.com/RestKit/RestKit) for iOS. However, I considered that this project is not big enough to use such a heavy framework.
