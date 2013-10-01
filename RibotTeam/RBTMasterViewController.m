@@ -118,12 +118,12 @@
    DLog(@"Manu testing");
    
    //add info button
-//   UIButton* infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
-//   //the method infoButtonAction will be fire when the user taps on top of the info button
-//   [infoButton addTarget:self action:@selector(infoButtonAction) forControlEvents:UIControlEventTouchUpInside];
-//   UIBarButtonItem *modalButton = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
-//   [self.navigationItem setRightBarButtonItem:modalButton animated:YES];
-//   [modalButton release];
+   UIButton* infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+   //the method infoButtonAction will be fire when the user taps on top of the info button
+   [infoButton addTarget:self action:@selector(infoButtonAction) forControlEvents:UIControlEventTouchUpInside];
+   UIBarButtonItem *modalButton = [[UIBarButtonItem alloc] initWithCustomView:infoButton];
+   [self.navigationItem setRightBarButtonItem:modalButton animated:YES];
+   [modalButton release];
    
    //set up poppyview for studio info 
    poppingView=[[RBTPoppingView alloc] init];
