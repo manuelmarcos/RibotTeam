@@ -26,19 +26,19 @@ FIND CLASSES:
 A good tip to find classes is have a look at the Navigation view (on the left hand side of Xcode) 
 where I have organized the classes depending on their type.
 
-![alt tag](http://emiliaregalado.com/ribotChallenge/navigationBar.png)
+![alt tag](images/navigationBar.png)
 
 FIND METHODS: 
 "pragma marks" is a very useful feature in Xcode when we are navigating within a class.
 
 We can find them here:
 
-![alt tag](http://emiliaregalado.com/ribotChallenge/pragmaMarkClick.png)
+![alt tag](images/pragmaMarkClick.png)
 
 Once we have clicked there, we will be able to see the list of pragma marks that this class has.
 Each pragma mark has a list of methods
 
-![alt tag](http://emiliaregalado.com/ribotChallenge/pragmaMarks.png)
+![alt tag](images/pragmaMarks.png)
 
 
 WHAT DO THEY DO? 
@@ -67,7 +67,7 @@ Once we are there, we have another three folders:
 
 They implement the logic of our application.
 
-![alt tag](http://emiliaregalado.com/ribotChallenge/navigationExample.png)
+![alt tag](images/navigationExample.png)
 
 Model
 -----
